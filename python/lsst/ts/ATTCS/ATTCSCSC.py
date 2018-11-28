@@ -52,6 +52,8 @@ class ATTCSCsc(base_csc.BaseCsc):
         if initial_state not in base_csc.State:
             raise ValueError(f"intial_state={initial_state} is not a salobj.State enum")
         super().__init__(SALPY_ATTCS, index)
+        print('initialized super')
+        
         self.summary_state = initial_state
 
         self.telTask = None
